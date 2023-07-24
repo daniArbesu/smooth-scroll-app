@@ -2,6 +2,7 @@
 import { useEffect } from 'react';
 import styles from './page.module.css';
 import { createLocomotive } from '@/services/locomotive';
+import IntroSection from '@/components/IntroSection';
 
 export default function Home() {
   useEffect(() => {
@@ -11,5 +12,9 @@ export default function Home() {
     }
   }, []);
 
-  return <main className={styles.main}></main>;
+  return (
+    <main className={styles.main}>
+      <IntroSection />
+    </main>
+  );
 }
