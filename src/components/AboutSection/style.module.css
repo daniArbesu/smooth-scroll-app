@@ -1,0 +1,14 @@
+.about {
+  position: relative;
+  z-index: 5;
+  font-size: 3vw;
+  color: white;
+  text-transform: uppercase;
+  margin-top: 25svh;
+  margin-left: 10vw;
+}
+
+.about p {
+  margin: 0;
+  position: relative;
+}
