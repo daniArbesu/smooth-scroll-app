@@ -1,3 +1,4 @@
+'use client';
 import Image from 'next/image';
 import styles from './style.module.css';
 import { useLayoutEffect, useRef } from 'react';
@@ -16,8 +17,8 @@ const IntroSection = () => {
         trigger: document.documentElement, // Document is the trigger
         start: 'top', // Start at the top of the document
         end: '+=500px', // Lenght of the scroll
-        scrub: true, // Animation linked with the scrollbar
-      },
+        scrub: true // Animation linked with the scrollbar
+      }
     });
 
     timeline
@@ -28,19 +29,10 @@ const IntroSection = () => {
   return (
     <section className={styles.intro}>
       <div ref={backgroundImageRef} className={styles.backgroundImage}>
-        <Image
-          src={'/images/background.jpeg'}
-          fill={true}
-          alt="Background image"
-        />
+        <Image src={'/images/background.jpeg'} fill={true} alt="Background image" />
       </div>
       <div className={styles.introContainer}>
-        <div
-          ref={introImageRef}
-          data-scroll
-          data-scroll-speed="0.3"
-          className={styles.introImage}
-        >
+        <div ref={introImageRef} data-scroll data-scroll-speed="0.3" className={styles.introImage}>
           <Image src={'/images/intro.png'} fill={true} alt="Background image" />
         </div>
         <h1 data-scroll data-scroll-speed="0.7">
